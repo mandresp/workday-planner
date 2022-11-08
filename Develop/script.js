@@ -22,20 +22,37 @@ $(document).ready(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+  function hourDisplay() {
+    var now = "hour-" + dayjs().hour();
+    console.log(now);
+    // var hourBlock = document.getElementById("hour-")
+    $(".time-block").each(function (){
+      var blockHour = $(this).attr("id");
+      console.log(blockHour);
+      if (blockHour === now) {
+        this.classList.add("present")
+      } else if (blockHour < now) {
+        this.classList.add("past")
+      } else {
+        this.classList.add("future")
+      }
+    });
+  };
+  hourDisplay();
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  $("#hour-0 .description").val(localStorage.getItem("hour-0"));
-  $("#hour-1 .description").val(localStorage.getItem("hour-1"));
-  $("#hour-2 .description").val(localStorage.getItem("hour-2"));
-  $("#hour-3 .description").val(localStorage.getItem("hour-3"));
-  $("#hour-4 .description").val(localStorage.getItem("hour-4"));
-  $("#hour-5 .description").val(localStorage.getItem("hour-5"));
-  $("#hour-6 .description").val(localStorage.getItem("hour-6"));
-  $("#hour-7 .description").val(localStorage.getItem("hour-7"));
-  $("#hour-8 .description").val(localStorage.getItem("hour-8"));
-  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+  $("#hour-00 .description").val(localStorage.getItem("hour-00"));
+  $("#hour-01 .description").val(localStorage.getItem("hour-01"));
+  $("#hour-02 .description").val(localStorage.getItem("hour-02"));
+  $("#hour-03 .description").val(localStorage.getItem("hour-03"));
+  $("#hour-04 .description").val(localStorage.getItem("hour-04"));
+  $("#hour-05 .description").val(localStorage.getItem("hour-05"));
+  $("#hour-06 .description").val(localStorage.getItem("hour-06"));
+  $("#hour-07 .description").val(localStorage.getItem("hour-07"));
+  $("#hour-08 .description").val(localStorage.getItem("hour-08"));
+  $("#hour-09 .description").val(localStorage.getItem("hour-09"));
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
   $("#hour-12 .description").val(localStorage.getItem("hour-12"));
