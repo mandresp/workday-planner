@@ -18,7 +18,7 @@ https://mandresp.github.io/workday-planner/
 
 ## Screenshot of Website
 
-![Website Screenshot](./Assets/Fullscreen%20Screenshot.png)
+![Website Screenshot](./Assets/Website%20Screenshot.png)
 
 ## Credits
 
